@@ -22,7 +22,21 @@ Does the length of stay of international students show differences in their aver
 
 ## Dataset
 
-The project uses a student survey dataset containing demographic, academic, social, and mental-health-related information.
+The project uses the `students` table containing survey data on university students, including demographic, academic, social, and mental-health-related information.
+
+The analysis uses the following variables:
+
+- `inter_dom` — identifies whether a student is international or domestic
+- `stay` — current length of stay in years
+- `todep` — PHQ-9 depression score
+- `tosc` — social connectedness score
+- `toas` — acculturative stress score
+
+The dataset was provided in the SQL learning environment used for the project.
+
+A copy of the dataset used in the analysis is included in this repository:
+
+[Dataset – students.csv](./students.csv)
 
 ## SQL Skills
 
