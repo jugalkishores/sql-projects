@@ -205,7 +205,7 @@ FROM golden_years;
 ## Limitations
 
 - The SQL learning environment used a limited set of 400 rows for the project rather than the complete dataset.
-- The complete dataset contains more than 13,000 games, so results from the project tables should not be interpreted as an analysis of the full Kaggle dataset. :contentReference[oaicite:2]{index=2}
+- The complete dataset contains more than 13,000 games, so results from the project tables should not be interpreted as an analysis of the full Kaggle dataset.
 - The analysis depends on the games and ratings available in the provided tables.
 - The use of average scores can be affected by the number of games represented in each year.
 - The analysis is descriptive and does not establish why particular years received higher critic or user ratings.
