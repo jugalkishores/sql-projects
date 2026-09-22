@@ -69,7 +69,6 @@ The first analysis counts the distinct users at each garage who use shared charg
 
 ```sql
 -- unique_users_per_garage
--- Modify the code below
 WITH unique_users_per_garage AS (SELECT garage_id,
 COUNT(DISTINCT user_id)	AS num_unique_users
 FROM charging_sessions
