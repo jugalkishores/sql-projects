@@ -30,7 +30,7 @@ The complete dataset contains **more than 13,000 video games** and is available 
 
 [Video Game Sales Data – Kaggle](https://www.kaggle.com/datasets/holmjason2/videogamedata)
 
-The Kaggle dataset contains video game information covering games from 1977 through the middle of 2020. The data primarily comes from VGChartz, while critic and user scores were collected from sources including Metacritic. :contentReference[oaicite:1]{index=1}
+The Kaggle dataset contains video game information covering games from 1977 through the middle of 2020. The data primarily comes from VGChartz, while critic and user scores were collected from sources including Metacritic.
 
 **Note:** The complete dataset is not included as a CSV in this repository because the original project used the pre-loaded tables provided in the SQL learning environment.
 
