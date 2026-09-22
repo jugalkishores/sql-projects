@@ -86,3 +86,12 @@ LIMIT 9;
 - The 1-year group had an average PHQ score of 7.48, average SCS of 38.11, and average AS of 72.80.
 - The groups with longer stays had much smaller sample sizes, particularly the 5–10 year groups.
 - The results are descriptive and should not be interpreted as evidence that length of stay causes changes in mental-health scores.
+
+## Tools & Skills
+
+- PostgreSQL
+- SQL
+- Data filtering and aggregation
+- GROUP BY analysis
+- Aggregate functions: COUNT(), AVG()
+- Data presentation with Markdown
