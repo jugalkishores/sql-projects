@@ -38,3 +38,14 @@ The project uses a student survey dataset containing demographic, academic, soci
 ## Project Type
 
 This is a **DataCamp Guided Project** completed as part of my SQL learning journey.
+
+## Analysis
+
+The analysis focuses specifically on international students and groups them by their current length of stay.
+
+For each length-of-stay group, the analysis calculates:
+
+- Number of international students
+- Average PHQ-9 depression score
+- Average social connectedness score
+- Average acculturative stress score
