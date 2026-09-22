@@ -79,3 +79,10 @@ LIMIT 9;
 | 3 | 46 | 9.09 | 37.13 | 78.00 |
 | 2 | 39 | 8.28 | 37.08 | 77.67 |
 | 1 | 95 | 7.48 | 38.11 | 72.80 |
+
+## Key Findings
+
+- The largest group of international students had a stay of 1 year, with 95 students.
+- The 1-year group had an average PHQ score of 7.48, average SCS of 38.11, and average AS of 72.80.
+- The groups with longer stays had much smaller sample sizes, particularly the 5–10 year groups.
+- The results are descriptive and should not be interpreted as evidence that length of stay causes changes in mental-health scores.
