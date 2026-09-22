@@ -22,25 +22,31 @@ The analysis focuses on:
 
 ## Dataset
 
-The data is stored in the `charging_sessions` table.
+The project uses the `charging_sessions` table, which was **pre-loaded in the SQL learning environment**.
 
-The table contains the following variables:
+The dataset contains information about EV charging sessions in apartment-building parking garages.
 
-- `garage_id` — identifier for the garage or building
-- `user_id` — identifier for the individual user
-- `user_type` — indicates whether the station is Shared or Private
-- `start_plugin` — date and time the charging session started
-- `start_plugin_hour` — hour when the charging session started
-- `end_plugout` — date and time the charging session ended
-- `end_plugout_hour` — hour when the charging session ended
-- `duration_hours` — length of the charging session in hours
-- `el_kwh` — electricity used in kilowatt hours
-- `month_plugin` — month when the session started
-- `weekdays_plugin` — day of the week when the session started
+### Table: `charging_sessions`
+
+| Column | Definition | Data Type |
+|---|---|---|
+| `garage_id` | Identifier for the garage/building | VARCHAR |
+| `user_id` | Identifier for the individual user | VARCHAR |
+| `user_type` | Indicates whether the station is `Shared` or `Private` | VARCHAR |
+| `start_plugin` | Date and time the session started | DATETIME |
+| `start_plugin_hour` | Hour in military time that the session started | NUMERIC |
+| `end_plugout` | Date and time the session ended | DATETIME |
+| `end_plugout_hour` | Hour in military time that the session ended | NUMERIC |
+| `duration_hours` | Length of the session in hours | NUMERIC |
+| `el_kwh` | Amount of electricity used in kilowatt hours | NUMERIC |
+| `month_plugin` | Month that the session started | VARCHAR |
+| `weekdays_plugin` | Day of the week that the session started | VARCHAR |
 
 The dataset is available under **CC BY 4.0** through Kaggle:
 
 [EV Charging from Apartment Buildings – Kaggle](https://www.kaggle.com/datasets/anshtanwar/residential-ev-chargingfrom-apartment-buildings)
+
+**Note:** The dataset was pre-loaded in the SQL learning environment. A copy of the dataset used for this project is also included in this repository as `ev_charging_sessions.csv`.
 
 ## SQL Skills
 
@@ -62,71 +68,100 @@ The dataset is available under **CC BY 4.0** through Kaggle:
 The first analysis counts the distinct users at each garage who use shared charging stations.
 
 ```sql
-WITH unique_users_per_garage AS (
-    SELECT 
-        garage_id,
-        COUNT(DISTINCT user_id) AS num_unique_users
-    FROM charging_sessions
-    WHERE user_type = 'Shared'
-    GROUP BY garage_id
-    ORDER BY num_unique_users DESC
-)
+-- unique_users_per_garage
+-- Modify the code below
+WITH unique_users_per_garage AS (SELECT garage_id,
+COUNT(DISTINCT user_id)	AS num_unique_users
+FROM charging_sessions
+WHERE user_type = 'Shared'
+GROUP BY garage_id
+ORDER BY num_unique_users DESC)
 SELECT *
 FROM unique_users_per_garage;
 ```
+
+#### Result
+
+| garage_id | num_unique_users |
+|---|---:|
+| Bl2 | 18 |
+| AsO2 | 17 |
+| UT9 | 16 |
+| AdO3 | 3 |
+| MS1 | 2 |
+| SR2 | 2 |
+| AdA1 | 1 |
+| Ris | 1 |
 
 ### 2. Most Popular Shared-Charging Start Times
 
 The second analysis identifies the ten most common combinations of weekday and starting hour for shared charging sessions.
 
 ```sql
+-- most_popular_shared_start_times
 WITH most_popular_shared_start_times AS (
-    SELECT 
-        weekdays_plugin,
-        start_plugin_hour,
-        COUNT(*) AS num_charging_sessions
-    FROM charging_sessions
-    WHERE user_type = 'Shared'
-    GROUP BY weekdays_plugin, start_plugin_hour
-    ORDER BY num_charging_sessions DESC
-    LIMIT 10
-)
+	SELECT weekdays_plugin,
+	start_plugin_hour,
+	COUNT(*) AS num_charging_sessions
+	FROM charging_sessions
+	WHERE user_type = 'Shared'
+	GROUP BY weekdays_plugin, start_plugin_hour
+	ORDER BY num_charging_sessions DESC
+	LIMIT 10)
 SELECT *
 FROM most_popular_shared_start_times;
 ```
 
+#### Result
+
+| weekdays_plugin | start_plugin_hour | num_charging_sessions |
+|---|---:|---:|
+| Sunday | 17 | 30 |
+| Friday | 15 | 28 |
+| Thursday | 16 | 26 |
+| Thursday | 19 | 26 |
+| Sunday | 18 | 25 |
+| Sunday | 15 | 25 |
+| Wednesday | 19 | 25 |
+| Monday | 15 | 24 |
+| Friday | 16 | 24 |
+| Sunday | 14 | 23 |
+
 ### 3. Users with Long Average Charging Sessions
 
-The third analysis identifies shared-charging users whose average charging session lasts more than 10 hours.
+The third analysis identifies shared-charging users whose average charging session duration is greater than 10 hours.
 
 ```sql
+-- long_duration_shared_users
 WITH long_duration_shared_users AS (
-    SELECT 
-        user_id,
-        AVG(duration_hours) AS avg_charging_duration
-    FROM charging_sessions
-    WHERE user_type = 'Shared'
-    GROUP BY user_id
-    HAVING AVG(duration_hours) > 10
-    ORDER BY avg_charging_duration DESC
-)
+	SELECT user_id,
+	AVG(duration_hours) AS avg_charging_duration
+	FROM charging_sessions
+	WHERE user_type = 'Shared'
+	GROUP BY user_id
+	HAVING AVG(duration_hours) > 10
+	ORDER BY avg_charging_duration DESC)
 SELECT *
 FROM long_duration_shared_users;
 ```
 
-## Results
+#### Result
 
-The SQL analysis produces three result sets:
-
-- A list of garages ranked by the number of unique shared-charging users.
-- The ten most common weekday and starting-hour combinations for shared charging sessions.
-- A list of shared-charging users whose average charging session duration exceeds 10 hours.
+| user_id | avg_charging_duration |
+|---|---:|
+| Share-9 | 16.845833335 |
+| Share-17 | 12.8945555511 |
+| Share-25 | 12.2144747466 |
+| Share-18 | 12.0888071898 |
+| Share-8 | 11.5504308392 |
+| AdO3-1 | 10.3693869729 |
 
 ## Key Findings
 
-- Shared charging usage can be compared across garages by counting distinct users.
-- Charging demand can be examined by combining the weekday and starting hour of each session.
-- Users with average charging durations above 10 hours can be identified using `GROUP BY` and `HAVING`.
+- Garage `Bl2` had the highest number of unique shared-charging users with **18 users**.
+- The most frequent shared-charging start time in the result set was **Sunday at 17:00**, with **30 sessions**.
+- Six shared-charging users had an average charging duration of more than **10 hours**.
+- `Share-9` had the highest average charging duration in the result set at approximately **16.85 hours**.
 - The analysis provides descriptive insights into shared EV charging behavior in apartment buildings.
 
 ## Tools
@@ -141,7 +176,7 @@ The SQL analysis produces three result sets:
 - The analysis focuses specifically on sessions where `user_type` is `Shared`.
 - The results describe the charging sessions represented in the dataset and may not represent all apartment buildings or EV users.
 - The analysis is descriptive and does not explain why users choose particular charging times or durations.
-- The SQL queries in the source project do not provide statistical testing or causal analysis.
+- The dataset was pre-loaded in the SQL learning environment.
 
 ## Project Files
 
