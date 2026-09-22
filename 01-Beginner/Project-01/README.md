@@ -1,15 +1,40 @@
-# Project 01
+# International Student Mental Health Analysis
 
-DataCamp SQL Guided Project
+**DataCamp Guided Project | SQL | PostgreSQL**
 
-## Level
-Beginner
+## Project Overview
 
-## Description
-SQL analysis project completed as part of my DataCamp SQL learning journey.
+This project explores the mental health of international university students and examines how mental health indicators vary across different lengths of stay.
 
-## Skills Used
+The analysis focuses on three measures:
+
+- PHQ-9 depression score
+- Social connectedness score (SCS)
+- Acculturative stress score (ASISS)
+
+## Analytical Question
+
+Does the length of stay of international students show differences in their average:
+
+- Depression scores?
+- Social connectedness?
+- Acculturative stress?
+
+## Dataset
+
+The project uses a student survey dataset containing demographic, academic, social, and mental-health-related information.
+
+## SQL Skills
+
 - SELECT
 - WHERE
 - GROUP BY
-- Aggregate functions
+- COUNT()
+- AVG()
+- ROUND()
+- ORDER BY
+- LIMIT
+
+## Project Type
+
+This is a **DataCamp Guided Project** completed as part of my SQL learning journey.
