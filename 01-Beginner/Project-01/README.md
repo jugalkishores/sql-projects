@@ -49,3 +49,18 @@ For each length-of-stay group, the analysis calculates:
 - Average PHQ-9 depression score
 - Average social connectedness score
 - Average acculturative stress score
+
+## SQL Query
+
+```sql
+SELECT 
+    stay,
+    COUNT(inter_dom) AS count_int,
+    ROUND(AVG(todep), 2) AS average_phq,
+    ROUND(AVG(tosc), 2) AS average_scs,
+    ROUND(AVG(toas), 2) AS average_as
+FROM students
+WHERE inter_dom = 'Inter'
+GROUP BY stay
+ORDER BY stay DESC
+LIMIT 9;
