@@ -101,3 +101,8 @@ LIMIT 9;
 - Some length-of-stay groups contain very few students, so their averages should be interpreted cautiously.
 - The analysis is descriptive and does not establish a causal relationship between length of stay and mental-health measures.
 - The project uses the variables and dataset provided by the DataCamp Guided Project.
+
+## Project Files
+
+- [SQL Analysis Notebook](./international-student-mental-health.ipynb)
+- [Dataset](./students.csv)
