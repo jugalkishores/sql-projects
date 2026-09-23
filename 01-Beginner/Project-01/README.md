@@ -111,7 +111,3 @@ LIMIT 9;
 - Some length-of-stay groups contain very few students, so their averages should be interpreted cautiously.
 - The analysis is descriptive and does not establish a causal relationship between length of stay and mental-health measures.
 - The findings are based on the available survey data and the variables included in the dataset.
-
-## Project Files
-
-- [Dataset](./students.csv)
