@@ -46,7 +46,7 @@ The dataset is available under **CC BY 4.0** through Kaggle:
 
 [EV Charging from Apartment Buildings – Kaggle](https://www.kaggle.com/datasets/anshtanwar/residential-ev-chargingfrom-apartment-buildings)
 
-**Note:** The dataset was pre-loaded in the SQL learning environment. A copy of the dataset used for this project is also included in this repository as `ev_charging_sessions.csv`.
+**Note:** The analysis was performed on the `charging_sessions` table pre-loaded in the SQL learning environment. A copy of the dataset is also included in this repository as `charging_sessions.csv`.
 
 ## SQL Skills
 
@@ -179,5 +179,5 @@ FROM long_duration_shared_users;
 
 ## Project Files
 
-- [Dataset](./ev_charging_sessions.csv)
+- [Dataset – charging_sessions.csv](./charging_sessions.csv)
 - [Original Dataset Source – Kaggle](https://www.kaggle.com/datasets/anshtanwar/residential-ev-chargingfrom-apartment-buildings)
