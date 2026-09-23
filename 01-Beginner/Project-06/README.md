@@ -32,7 +32,7 @@ The complete dataset contains **more than 13,000 video games** and is available 
 
 The Kaggle dataset contains video game information covering games from 1977 through the middle of 2020. The data primarily comes from VGChartz, while critic and user scores were collected from sources including Metacritic.
 
-**Note:** The complete dataset is not included as a CSV in this repository because the original project used the pre-loaded tables provided in the SQL learning environment.
+**Note:** Copies of all four tables used in the SQL analysis are included in this repository as CSV files. The CSV exports include an additional `index` column from the export; the SQL analysis uses the original table fields shown above.
 
 ## Database Tables
 
@@ -132,7 +132,7 @@ INNER JOIN game_sales AS gs
 ON rs.name = gs.name
 GROUP BY year
 HAVING count(*) > 4
-ORDER BY avg_critic_score DESC
+ORDER BY avg_critic_score DESC, year DESC
 LIMIT 10)
 SELECT *
 FROM critics_top_ten_years;
@@ -208,4 +208,13 @@ FROM golden_years;
 - The complete dataset contains more than 13,000 games, so results from the project tables should not be interpreted as an analysis of the full Kaggle dataset.
 - The analysis depends on the games and ratings available in the provided tables.
 - The use of average scores can be affected by the number of games represented in each year.
+- The project tables contain 400 game records and 400 review records, while the yearly rating tables contain 24 years of summarized data.
 - The analysis is descriptive and does not establish why particular years received higher critic or user ratings.
+
+## Project Files
+
+- [Dataset – game_sales.csv](./game_sales.csv)
+- [Dataset – reviews.csv](./reviews.csv)
+- [Dataset – users_avg_year_rating.csv](./users_avg_year_rating.csv)
+- [Dataset – critics_avg_year_rating.csv](./critics_avg_year_rating.csv)
+- [Original Dataset Source – Kaggle](https://www.kaggle.com/datasets/holmjason2/videogamedata)
