@@ -18,6 +18,10 @@ The data spans **101 years, from 1920 through 2020**.
 2. What were the top 20 male names overall, and how did the name Paul rank?
 3. Which female names appeared in both 1920 and 2020?
 
+## Business Context
+
+This analysis shows how SQL can be used to examine long-term changes in consumer preferences and compare patterns across different periods in a historical dataset.
+
 ## Dataset
 
 The project uses the `baby_names` table, which was **pre-loaded in the SQL learning environment**.
@@ -255,7 +259,6 @@ FROM a_names;
 - The dataset covers the period from 1920 through 2020.
 - The analysis is descriptive and does not explain the reasons behind changes in baby-name popularity.
 - The dataset was pre-loaded in the SQL learning environment, while a copy is also included in this repository for reference.
-
 
 ## Project Files
 
