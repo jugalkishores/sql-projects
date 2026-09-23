@@ -36,7 +36,11 @@ The dataset contains information about debt owed by developing countries across 
 | `indicator_code` | varchar | Code representing the debt indicator |
 | `debt` | float | Value of the debt indicator for the given country in current US dollars |
 
-**Note:** The dataset was provided as a pre-loaded SQL table in the learning environment and is therefore not included as a separate CSV file in this repository.
+A copy of the dataset used in the analysis is included in this repository:
+
+[Dataset – international_debt.csv](./international_debt.csv)
+
+**Note:** The repository CSV includes an additional `index` column from the CSV export. The SQL analysis uses the original `international_debt` table fields shown above.
 
 ## SQL Skills
 
@@ -137,6 +141,10 @@ LIMIT 1;
 ## Limitations
 
 - The analysis is based on the countries and debt indicators included in the provided dataset.
-- The dataset was pre-loaded in the SQL learning environment rather than provided as a separate CSV file.
+- The dataset was pre-loaded in the SQL learning environment, while a copy is also included in this repository for reference.
 - The analysis is descriptive and does not explain the economic factors behind differences in debt or repayment values.
 - Debt values are reported in current US dollars as represented in the dataset.
+
+## Project Files
+
+- [Dataset – international_debt.csv](./international_debt.csv)
