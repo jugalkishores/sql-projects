@@ -98,7 +98,8 @@ WHERE sex = 'M'
 GROUP BY first_name
 LIMIT 20)
 SELECT *
-FROM top_20;
+FROM top_20
+ORDER BY name_rank, first_name;
 -- Paul rank 13
 ```
 
