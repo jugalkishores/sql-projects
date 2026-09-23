@@ -18,6 +18,8 @@ How does the total product carbon footprint vary across industry groups in the m
 
 The project uses the `product_emissions` table in a PostgreSQL database provided in the SQL learning environment.
 
+The dataset contains **100 product records** across **11 columns**.
+
 The data comes from **The Carbon Catalogue** and is publicly available through Nature:
 
 [Source: Nature – The Carbon Catalogue](https://www.nature.com/articles/s41597-022-01178-9)
@@ -38,7 +40,9 @@ The data comes from **The Carbon Catalogue** and is publicly available through N
 | `operations_percent_total_pcf` | VARCHAR | Operations emissions as a percentage of total PCF |
 | `downstream_percent_total_pcf` | VARCHAR | Downstream emissions as a percentage of total PCF |
 
-**Note:** The dataset was provided as a PostgreSQL table in the original SQL learning environment rather than as a separate dataset file in this repository.
+A copy of the dataset used in the analysis is included in this repository:
+
+[Dataset – product_emissions.csv](./product_emissions.csv)
 
 ## SQL Skills
 
@@ -80,24 +84,22 @@ ORDER BY total_industry_footprint DESC;
 
 ### Result
 
+The most recent year available in the dataset is **2017**.
+
 | Industry Group | Companies | Total Carbon Footprint |
 |---|---:|---:|
-| Materials | 3 | 107,129.0 |
-| Capital Goods | 2 | 94,942.7 |
-| Technology Hardware & Equipment | 4 | 21,865.1 |
-| Food, Beverage & Tobacco | 1 | 3,161.5 |
-| Commercial & Professional Services | 1 | 740.6 |
-| Software & Services | 1 | 690.0 |
+| Materials | 1 | 106,008.0 |
+| Technology Hardware & Equipment | 1 | 5,580.0 |
+| Capital Goods | 1 | 5.7 |
 
 ## Key Findings
 
-- Materials recorded the highest total product carbon footprint in the most recent year available in the dataset, at **107,129.0**.
-- Capital Goods recorded a total of **94,942.7**.
-- Technology Hardware & Equipment recorded **21,865.1** across four distinct companies.
-- Food, Beverage & Tobacco recorded **3,161.5**.
-- Commercial & Professional Services recorded **740.6**.
-- Software & Services recorded **690.0**.
-- The number of companies represented differs across industry groups, so the total footprint should not be interpreted as carbon footprint per company.
+- Materials recorded the highest total product carbon footprint in the most recent year available in the dataset, at **106,008.0**.
+- Technology Hardware & Equipment recorded **5,580.0**.
+- Capital Goods recorded **5.7**.
+- One distinct company is represented in each of the three industry groups in the 2017 data contained in the repository.
+- The total footprint represents the products included in the dataset and should not be interpreted as the total carbon footprint of the entire industry.
+- The analysis is descriptive and focuses on the recorded product carbon footprint values in the dataset.
 
 ## Tools
 
@@ -115,4 +117,5 @@ ORDER BY total_industry_footprint DESC;
 
 ## Project Files
 
+- [Dataset – product_emissions.csv](./product_emissions.csv)
 - [Project Source – Nature](https://www.nature.com/articles/s41597-022-01178-9)
