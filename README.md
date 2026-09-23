@@ -121,7 +121,8 @@ sql-projects/
         ├── game_sales.csv
         ├── reviews.csv
         ├── users_avg_year_rating.csv
-        └── yearly rating summary CSVs
+        ├── critics_avg_year_rating.csv
+        └── users_avg_year_rating.csv
 ```
 
 ## About This Repository
