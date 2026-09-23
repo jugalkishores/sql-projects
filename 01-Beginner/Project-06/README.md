@@ -20,6 +20,10 @@ The project uses SQL techniques including joins, aggregations, filtering, orderi
 2. Which years have the highest average critic scores?
 3. Which years could be considered "golden years" based on critic and user ratings?
 
+## Business Context
+
+This analysis demonstrates how sales and review data can be combined to examine relationships between commercial performance, critic ratings, and user ratings across release years.
+
 ## Dataset
 
 The SQL learning environment provided a **limited version of the video game dataset**, with the relevant tables restricted to 400 rows for the project.
@@ -71,7 +75,7 @@ The Kaggle dataset contains video game information covering games from 1977 thro
 | `num_games` | int | Number of games released that year |
 | `avg_critic_score` | float | Average critic score for the year |
 
-## SQL Skills
+## SQL Skills Demonstrated
 
 - SELECT
 - Common Table Expressions (CTEs)
