@@ -33,7 +33,11 @@ For processing speed, the dataset is limited to first names which were given to 
 | `sex` | varchar | Sex of babies given `first_name` |
 | `num` | int | Number of babies of `sex` given `first_name` in that year |
 
-**Note:** The dataset was provided within the SQL learning environment and is therefore not included as a separate CSV file in this repository.
+A copy of the dataset used in the analysis is included in this repository:
+
+[Dataset – baby_names.csv](./baby_names.csv)
+
+**Note:** The repository CSV includes an additional `index` column from the CSV export. The SQL analysis uses the original `baby_names` table fields shown above.
 
 ## SQL Skills
 
@@ -249,4 +253,9 @@ FROM a_names;
 - The dataset is limited to first names given to more than 5,000 American babies in a given year.
 - The dataset covers the period from 1920 through 2020.
 - The analysis is descriptive and does not explain the reasons behind changes in baby-name popularity.
-- The dataset was pre-loaded in the SQL learning environment rather than provided as a separate CSV file in this repository.
+- The dataset was pre-loaded in the SQL learning environment, while a copy is also included in this repository for reference.
+
+
+## Project Files
+
+- [Dataset – baby_names.csv](./baby_names.csv)
