@@ -20,6 +20,10 @@ Does the length of stay of international students show differences in their aver
 - Social connectedness?
 - Acculturative stress?
 
+## Business Context
+
+This type of analysis can help researchers explore how survey-based mental-health indicators vary across groups, while keeping the interpretation descriptive rather than causal.
+
 ## Dataset
 
 The project uses the `students` table containing survey data on university students, including demographic, academic, social, and mental-health-related information.
@@ -97,7 +101,7 @@ LIMIT 9;
 - The groups with longer stays had much smaller sample sizes, particularly the 5–10 year groups.
 - The results are descriptive and should not be interpreted as evidence that length of stay causes changes in mental-health scores.
 
-## Tools & Skills
+## Tools
 
 - PostgreSQL
 - SQL
@@ -111,3 +115,7 @@ LIMIT 9;
 - Some length-of-stay groups contain very few students, so their averages should be interpreted cautiously.
 - The analysis is descriptive and does not establish a causal relationship between length of stay and mental-health measures.
 - The findings are based on the available survey data and the variables included in the dataset.
+
+## Project Files
+
+- [Dataset – students.csv](./students.csv)
