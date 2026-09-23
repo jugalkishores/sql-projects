@@ -14,6 +14,10 @@ The analysis focuses on the total product carbon footprint recorded for each ind
 
 How does the total product carbon footprint vary across industry groups in the most recent year, and how many distinct companies are represented in each industry group?
 
+## Business Context
+
+A sustainability analyst could use this type of analysis to compare recorded product-level emissions across industry groups and identify where the largest footprints occur in the available data.
+
 ## Dataset
 
 The project uses the `product_emissions` table in a PostgreSQL database provided in the SQL learning environment.
