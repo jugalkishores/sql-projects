@@ -20,6 +20,10 @@ The analysis focuses on:
 2. What are the most popular days and hours for shared charging sessions?
 3. Which shared-charging users have an average charging duration of more than 10 hours?
 
+## Business Context
+
+For an apartment-building operator, understanding when shared charging stations are most frequently used can support analysis of charging demand, station utilization, and infrastructure planning.
+
 ## Dataset
 
 The project uses the `charging_sessions` table, which was **pre-loaded in the SQL learning environment**.
@@ -76,7 +80,8 @@ WHERE user_type = 'Shared'
 GROUP BY garage_id
 ORDER BY num_unique_users DESC)
 SELECT *
-FROM unique_users_per_garage;
+FROM unique_users_per_garage
+ORDER BY num_unique_users DESC;
 ```
 
 #### Result
@@ -108,7 +113,8 @@ WITH most_popular_shared_start_times AS (
 	ORDER BY num_charging_sessions DESC
 	LIMIT 10)
 SELECT *
-FROM most_popular_shared_start_times;
+FROM most_popular_shared_start_times
+ORDER BY num_charging_sessions DESC, weekdays_plugin, start_plugin_hour;
 ```
 
 #### Result
@@ -141,7 +147,8 @@ WITH long_duration_shared_users AS (
 	HAVING AVG(duration_hours) > 10
 	ORDER BY avg_charging_duration DESC)
 SELECT *
-FROM long_duration_shared_users;
+FROM long_duration_shared_users
+ORDER BY avg_charging_duration DESC, user_id;
 ```
 
 #### Result
