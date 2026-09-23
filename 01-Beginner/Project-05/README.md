@@ -20,6 +20,10 @@ The analysis answers three questions:
 2. What country has the highest amount of debt?
 3. What country has the lowest amount of principal repayments?
 
+## Business Context
+
+This analysis demonstrates how SQL can summarize financial indicators across countries and compare debt and repayment values within a structured dataset.
+
 ## Dataset
 
 The project uses the `international_debt` table, which was **pre-loaded in the SQL learning environment**.
