@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-What characteristics help a business remain in operation for centuries?
+How are the world's oldest recorded businesses distributed across continents and business categories?
 
 This project analyzes data on some of the world's oldest businesses and combines information from multiple tables to explore how long-established businesses are distributed across continents and business categories.
 
@@ -18,7 +18,7 @@ The project focuses on three questions:
 
 1. What is the oldest business on each continent?
 2. How many countries per continent lack data on the oldest businesses? Does including `new_businesses` change this?
-3. Which business categories are best suited to last over the course of centuries?
+3. Which business categories have the oldest recorded businesses across different continents?
 
 ## Business Context
 
@@ -222,7 +222,7 @@ ORDER BY continent, category;
 - **Kongō Gumi** is the oldest business returned for any continent in the analysis, with a founding year of **578** in Asia.
 - **St. Peter Stifts Kulinarium** is the oldest business returned for Europe, founded in **803**.
 - The addition of `new_businesses` fills one missing country in **North America** and one in **Oceania**.
-- The category analysis shows that the earliest recorded business varies substantially by continent and category.
+- The category analysis shows that the earliest recorded business varies substantially by continent and category. These results describe the oldest examples in the dataset; they do not measure the likelihood that a category survives longer than another.
 - The category-level results also contain one unmatched country record, which is reflected by the missing continent in the final row.
 
 ## Data Quality Note
