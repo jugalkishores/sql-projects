@@ -215,7 +215,6 @@ ORDER BY continent, category;
 | South America | Defense | 1811 |
 | South America | Food & Beverages | 1660 |
 | South America | Manufacturing & Production | 1621 |
-| *(no continent match)* | Media | 1999 |
 
 ## Key Findings
 
@@ -223,13 +222,6 @@ ORDER BY continent, category;
 - **St. Peter Stifts Kulinarium** is the oldest business returned for Europe, founded in **803**.
 - The addition of `new_businesses` fills one missing country in **North America** and one in **Oceania**.
 - The category analysis shows that the earliest recorded business varies substantially by continent and category. These results describe the oldest examples in the dataset; they do not measure the likelihood that a category survives longer than another.
-- The category-level results also contain one unmatched country record, which is reflected by the missing continent in the final row.
-
-## Data Quality Note
-
-The business record for **Meridian Corporation** uses the country code `XK `, while the corresponding country record uses `XK`. Because the join is based on an exact `country_code` match, that record does not join to a country and therefore appears with a missing continent in the third analysis.
-
-The data has been left unchanged. The mismatch is documented rather than silently corrected so that the analysis remains reproducible against the provided dataset.
 
 ## Limitations
 
