@@ -80,49 +80,71 @@ Explores video game sales, critic scores, and user ratings to examine sales perf
 
 [View Project →](./01-Beginner/Project-06)
 
+## Intermediate SQL
+
+The **Intermediate SQL** section builds on the foundational projects with more involved multi-table analysis, subqueries, CTEs, set operations, and data-quality considerations.
+
+### 01. Analyzing the World's Oldest Businesses
+
+Combines business, country, and category data to examine the oldest recorded businesses by continent, identify countries with missing business data, and compare business categories across continents.
+
+**Key SQL concepts:** `INNER JOIN`, `LEFT JOIN`, `USING`, `UNION ALL`, correlated subqueries, CTEs, `MIN()`, multi-table analysis
+
+[View Project →](./02-Intermediate/Project-01)
+
 ## SQL Skills Demonstrated
 
 | Skill | Projects |
 |---|---|
-| Filtering & aggregation | 01, 02, 03, 05 |
-| `GROUP BY` & aggregate functions | 01–06 |
-| `COUNT(DISTINCT)` | 02, 03, 05 |
-| Subqueries | 02 |
-| `HAVING` | 03, 06 |
-| Common Table Expressions (CTEs) | 03, 04, 06 |
-| `CASE` statements | 04 |
-| Window functions & `RANK()` | 04 |
-| `INNER JOIN` / `USING` | 06 |
-| Multi-table analysis | 06 |
+| Filtering & aggregation | Beginner 01–06 |
+| `GROUP BY` & aggregate functions | Beginner 01–06 |
+| `COUNT(DISTINCT)` | Beginner 02, 03, 05 |
+| Subqueries | Beginner 02; Intermediate 01 |
+| `HAVING` | Beginner 03, 06 |
+| Common Table Expressions (CTEs) | Beginner 03, 04, 06; Intermediate 01 |
+| `CASE` statements | Beginner 04 |
+| Window functions & `RANK()` | Beginner 04 |
+| `INNER JOIN` / `USING` | Beginner 06; Intermediate 01 |
+| `LEFT JOIN` | Intermediate 01 |
+| `UNION ALL` | Intermediate 01 |
+| Multi-table analysis | Beginner 06; Intermediate 01 |
+| Data-quality awareness | Intermediate 01 |
 
 ## Repository Structure
 
 ```text
 sql-projects/
 ├── README.md
-└── 01-Beginner/
-    ├── Project-01/
-    │   ├── README.md
-    │   └── students.csv
-    ├── Project-02/
-    │   ├── README.md
-    │   └── product_emissions.csv
-    ├── Project-03/
-    │   ├── README.md
-    │   └── charging_sessions.csv
-    ├── Project-04/
-    │   ├── README.md
-    │   └── baby_names.csv
-    ├── Project-05/
-    │   ├── README.md
-    │   └── international_debt.csv
-    └── Project-06/
+├── 01-Beginner/
+│   ├── Project-01/
+│   │   ├── README.md
+│   │   └── students.csv
+│   ├── Project-02/
+│   │   ├── README.md
+│   │   └── product_emissions.csv
+│   ├── Project-03/
+│   │   ├── README.md
+│   │   └── charging_sessions.csv
+│   ├── Project-04/
+│   │   ├── README.md
+│   │   └── baby_names.csv
+│   ├── Project-05/
+│   │   ├── README.md
+│   │   └── international_debt.csv
+│   └── Project-06/
+│       ├── README.md
+│       ├── game_sales.csv
+│       ├── reviews.csv
+│       ├── critics_avg_year_rating.csv
+│       └── users_avg_year_rating.csv
+└── 02-Intermediate/
+    └── Project-01/
         ├── README.md
-        ├── game_sales.csv
-        ├── reviews.csv
-        ├── users_avg_year_rating.csv
-        ├── critics_avg_year_rating.csv
-        └── users_avg_year_rating.csv
+        ├── analysis.sql
+        ├── businesses.csv
+        ├── new_businesses.csv
+        ├── countries.csv
+        └── categories.csv
 ```
 
 ## About This Repository
